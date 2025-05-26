@@ -1,19 +1,20 @@
 const express = require('express')
 const app =express();
-//const db= require('./db');
+const db= require('./db');
+
 
 //old json
 //const bodyParser= require('bodyParser'); //req.body
-//app.use(bodyParser.json());
+//app.use(bodyParser.json()); // req.body
 
 // new json
 app.use(express.json());
 
-//const Person = require('/models/Person');
-//const menuItem = require('./models/MenuItem');
-const mongoose = require('mongoose');
+//const personRoutes = require('./routes/Person');
+//const menuItemRoutes = require('./routes/menuItemRoutes');
+//const mongoose = require('mongoose');
 
-app.get('/',(req, res)=>{
+app.get('/', function (req, res){
             res.send('welcom to my hotel..')
         
         });
@@ -91,3 +92,4 @@ app.use('/menu', menuItemRoutes);
 app.listen(300, ()=>{
     console.log('listening');
 });
+//cccc

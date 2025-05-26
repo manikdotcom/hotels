@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/mydb');
+//mongoose.connect('mongodb://localhost:27017/mydb');
+const mongoUrl= 'mongodb+srv://nodee:C2g7w.kWtiU4bxy@nodeapp.moxgdiz.mongodb.net/';
 
 
 
