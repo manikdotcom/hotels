@@ -1,7 +1,7 @@
 const express = require('express')
 const app =express();
 const db= require('./db');
-
+require('dotenv').config();
 
 //old json
 //const bodyParser= require('bodyParser'); //req.body
@@ -9,6 +9,7 @@ const db= require('./db');
 
 // new json
 app.use(express.json());
+const PORT = process.env.PORT || 3000;
 
 //const personRoutes = require('./routes/Person');
 //const menuItemRoutes = require('./routes/menuItemRoutes');
@@ -89,7 +90,9 @@ const menuItemRoutes =require('./routes/menuItemRoutes');
 // use the routers
 app.use('/person', personRoutes);
 app.use('/menu', menuItemRoutes);
-app.listen(300, ()=>{
+
+
+app.listen(PORT, ()=>{
     console.log('listening');
 });
 //cccc

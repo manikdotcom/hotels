@@ -1,4 +1,5 @@
 #  Ignore node_moduler directory
 node_modules/
 readmenode.rtf
+.env
 # other entries...

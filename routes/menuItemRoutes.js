@@ -13,7 +13,7 @@ router.post('/', async (req, res) =>{
     }
     catch(err){
         console.log(err);
-        res.status(500).json({error: 'Internal Server Error'});
+        res.status(500).json({error: 'Internal 1Server Error'});
     }
 })
 
@@ -25,7 +25,7 @@ router.get('/', async (req, res) =>{
         res.status(200).json(data);
     }catch(err){
         console.log(err);
-        res.status(500).json({error: 'Internal Server Error'});
+        res.status(500).json({error: 'Internal 2Server Error'});
     }
 })
 
@@ -37,11 +37,11 @@ router.get('/:taste', async (req, res) =>{
             console.log('response fetched');
             res.status(200).json(response);
         }else{
-            res.status(404).json({error: 'Invalid Taste type'});
+            res.status(404).json({error: 'Invalid 3Taste type'});
         }
     }catch(err){
         console.log(err);
-        res.status(500).json({error: 'Internal Server Error'});
+        res.status(500).json({error: 'Internal 4Server Error'});
     }
 })
 
@@ -63,7 +63,7 @@ router.put('/:id', async (req, res)=>{
         res.status(200).json(response);
     }catch(err){
         console.log(err);
-        res.status(500).json({error: 'Internal Server Error'});
+        res.status(500).json({error: 'Internal 333Server Error'});
     }
 })
 
@@ -80,7 +80,7 @@ router.delete('/:id', async (req, res) => {
         res.status(200).json({message: 'Menu Deleted Successfully'});
     }catch(err){
         console.log(err);
-        res.status(500).json({error: 'Internal Server Error'});
+        res.status(500).json({error: 'Internal Server 222Error'});
     }
 })
 
